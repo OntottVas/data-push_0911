@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Storage</title>
+    <link rel="stylesheet" href="/header.css">
+</head>
+<body>
+<table class="header">
+    <tr>
+        <td class="element"><a th:href="@{/home}">Home</a></td>
+        <td class="element"><a th:href="@{/registration}">Registration</a></td>
+        <td class="element"><a th:href="@{/show}">Show Everything</a></td>
+    </tr>
+</table>
+
+<table class="usersTable">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Languages</th>
+
+    </tr>
+    </thead>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.name()}"></td>
+        <td th:text="${user.gender()}"></td>
+        <td>
+            <ul>
+                <li th:each="language : ${user.languages}" th:text="${language}"></li>
+            </ul>
+        </td>
+
+    </tr>
+</table>
+
+</body>
+</html>

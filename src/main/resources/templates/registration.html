@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Storage</title>
+    <link rel="stylesheet" href="/header.css">
+</head>
+<body>
+<table class="header">
+    <tr>
+        <td class="element"><a th:href="@{/home}">Home</a></td>
+        <td class="element"><a th:href="@{/registration}">Registration</a></td>
+        <td class="element"><a th:href="@{/show}">Show Everything</a></td>
+    </tr>
+</table>
+
+<form th:action="@{/regist}" method="post">
+    <label>Name: <input placeholder="Type in your name" type="text" id="name" name="name"></label>
+    <div>
+        <label>Gender: </label>
+        <label>Male <input type="radio" id="male" name="gender" value="male"></label>
+        <label>Female <input type="radio" id="female" name="gender" value="female"></label>
+    </div>
+    <div>
+        <label>Language: </label>
+        <label>English</label>
+        <input type="checkbox" id="english" name="languages" value="english">
+        <label>Hungarian</label>
+        <input type="checkbox" id="hungarian" name="languages" value="hungarian">
+        <label>Spanish</label>
+        <input type="checkbox" id="spanish" name="languages" value="spanish">
+        <label>French</label>
+        <input type="checkbox" id="french" name="languages" value="french">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

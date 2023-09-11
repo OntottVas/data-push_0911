@@ -1,0 +1,15 @@
+.header {
+    background-color: green;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.header.element {
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
